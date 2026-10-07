@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: devops-backend
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/devopsdb}
+    username: ${DB_USERNAME:devops}
+    password: ${DB_PASSWORD:devops}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      probes:
+        enabled: true

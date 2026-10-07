@@ -1,0 +1,27 @@
+<main class="shell">
+  <section class="hero">
+    <p class="eyebrow">SPRING + ANGULAR + DEVOPS</p>
+    <h1>Delivery Platform Demo</h1>
+    <p>A tiny application whose real purpose is to showcase CI/CD, containers, Kubernetes and GitOps.</p>
+  </section>
+
+  <section class="card">
+    <form (ngSubmit)="add()" class="add-form">
+      <input name="title" [(ngModel)]="newTitle" placeholder="Add a task" autocomplete="off">
+      <button type="submit">Add</button>
+    </form>
+
+    <p *ngIf="loading">Loading…</p>
+    <p class="error" *ngIf="error">{{ error }}</p>
+
+    <ul>
+      <li *ngFor="let task of tasks">
+        <label>
+          <input type="checkbox" [checked]="task.completed" (change)="toggle(task)">
+          <span [class.done]="task.completed">{{ task.title }}</span>
+        </label>
+        <button class="danger" type="button" (click)="remove(task)">Delete</button>
+      </li>
+    </ul>
+  </section>
+</main>
