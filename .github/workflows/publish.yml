@@ -86,4 +86,6 @@ jobs:
 
           git add kubernetes/app.yaml
           git commit -m "deploy: ${GITHUB_SHA}" || exit 0
-          git push
+
+          git pull --rebase origin master
+          git push origin master
