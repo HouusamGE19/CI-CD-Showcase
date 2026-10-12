@@ -276,6 +276,12 @@ Prometheus target health was validated through its API and reported the Spring b
 health = up
 lastError = ""
 ```
+## Prometheus target health
+
+![Prometheus target health](docs/screenshots/prometheus-targets.png)
+
+Prometheus successfully scrapes the Spring Boot backend through
+`/actuator/prometheus`. The `spring-backend` target is `UP`.
 
 ## Grafana dashboard
 
