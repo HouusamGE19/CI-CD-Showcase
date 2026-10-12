@@ -83,7 +83,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/houusamge19/ci-cd-showcase/backend:47b17868267d266595d2b4576cdac94050a940bf
+          image: ghcr.io/houusamge19/ci-cd-showcase/backend:4cecd74647896094247726657823ac8c74eb401e
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -138,7 +138,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/houusamge19/ci-cd-showcase/frontend:47b17868267d266595d2b4576cdac94050a940bf
+          image: ghcr.io/houusamge19/ci-cd-showcase/frontend:4cecd74647896094247726657823ac8c74eb401e
           imagePullPolicy: Always
           ports:
             - containerPort: 80
